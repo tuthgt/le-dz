@@ -3,5 +3,7 @@
     <Deploy />
   </Project>
   <Project Path="MyApp.Desktop/MyApp.Desktop.csproj" />
+  <Project Path="MyApp/MyApp.ConsoleApp/MyApp.ConsoleApp.csproj" />
   <Project Path="MyApp/MyApp.csproj" />
+  <Project Path="MyApp/MyApp.Data/MyApp.Data.csproj" />
 </Solution>
