@@ -4,7 +4,7 @@
     <Nullable>enable</Nullable>
     <LangVersion>latest</LangVersion>
   </PropertyGroup>
-  
+
   <ItemGroup>
     <AvaloniaResource Include="Assets\**" />
   </ItemGroup>
@@ -18,5 +18,15 @@
       <PrivateAssets Condition="'$(Configuration)' != 'Debug'">All</PrivateAssets>
     </PackageReference>
     <PackageReference Include="CommunityToolkit.Mvvm" />
+  </ItemGroup>
+
+  <!-- Исключаем исходники вложенных проектов -->
+  <ItemGroup>
+    <Compile Remove="MyApp.Data/**/*.cs" />
+    <Compile Remove="MyApp.ConsoleApp/**/*.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="MyApp.Data\MyApp.Data.csproj" />
   </ItemGroup>
 </Project>
