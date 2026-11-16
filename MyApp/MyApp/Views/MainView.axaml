@@ -1,18 +1,146 @@
 <UserControl xmlns="https://github.com/avaloniaui"
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
-             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-             xmlns:vm="using:MyApp.ViewModels"
-             mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
-             x:Class="MyApp.Views.MainView"
-             x:DataType="vm:MainViewModel">
-    <Design.DataContext>
-        <!-- This only sets the DataContext for the previewer in an IDE,
-             to set the actual DataContext for runtime, set the DataContext property in code (look at App.axaml.cs) -->
-        <vm:MainViewModel />
-    </Design.DataContext>
+             xmlns:models="using:MyApp.Data.Models"
+             x:Class="MyApp.Views.MainView">
 
-    <TextBox Text="{Binding Greeting}"
-             HorizontalAlignment="Center"
-             VerticalAlignment="Center" />
+    <TabControl>
+
+        <!-- КОМАНДЫ -->
+        <TabItem Header="Команды">
+            <ScrollViewer VerticalScrollBarVisibility="Auto">
+                <StackPanel Margin="12" Spacing="8">
+
+                    <TextBlock Text="Добавление команды"
+                               FontSize="18"
+                               FontWeight="Bold"/>
+
+                    <TextBlock Text="Название команды"/>
+                    <TextBox x:Name="TeamNameBox"/>
+
+                    <TextBlock Text="Имя капитана"/>
+                    <TextBox x:Name="CaptainNameBox"/>
+
+                    <TextBlock Text="Количество участников"/>
+                    <TextBox x:Name="MemberCountBox"/>
+
+                    <TextBlock Text="Уровень опыта"/>
+                    <TextBox x:Name="ExperienceLevelBox"/>
+
+                    <Button x:Name="AddTeamButton" Content="Добавить"/>
+                    <Button x:Name="DeleteTeamButton" Content="Удалить выбранную"/>
+                    <Button x:Name="SaveTeamButton" Content="Сохранить изменения"/>
+
+                    <TextBlock x:Name="TeamMessage"
+                               TextWrapping="Wrap"/>
+
+                    <TextBlock Text="Список команд"
+                               FontSize="18"
+                               FontWeight="Bold"/>
+
+                    <ListBox x:Name="TeamsList"
+                             Height="180"/>
+
+                </StackPanel>
+            </ScrollViewer>
+        </TabItem>
+
+        <!-- КВЕСТЫ -->
+        <TabItem Header="Квесты">
+            <ScrollViewer VerticalScrollBarVisibility="Auto">
+                <StackPanel Margin="12" Spacing="8">
+
+                    <TextBlock Text="Добавление квеста"
+                               FontSize="18"
+                               FontWeight="Bold"/>
+
+                    <TextBlock Text="Название квеста"/>
+                    <TextBox x:Name="QuestTitleBox"/>
+
+                    <TextBlock Text="Жанр"/>
+                    <TextBox x:Name="QuestGenreBox"/>
+
+                    <TextBlock Text="Сложность (1-5)"/>
+                    <TextBox x:Name="QuestDifficultyBox"/>
+
+                    <TextBlock Text="Уровень страха (1-5)"/>
+                    <TextBox x:Name="QuestFearLevelBox"/>
+
+                    <TextBlock Text="Продолжительность (минуты)"/>
+                    <TextBox x:Name="QuestDurationBox"/>
+
+                    <Button x:Name="AddQuestButton" Content="Добавить"/>
+                    <Button x:Name="DeleteQuestButton" Content="Удалить выбранный"/>
+
+                    <TextBlock x:Name="QuestMessage"
+                               TextWrapping="Wrap"/>
+
+                    <TextBlock Text="Список квестов"
+                               FontSize="18"
+                               FontWeight="Bold"/>
+
+                    <ListBox x:Name="QuestsList"
+                             Height="180"/>
+
+                </StackPanel>
+            </ScrollViewer>
+        </TabItem>
+
+        <!-- ПРОХОЖДЕНИЯ -->
+        <TabItem Header="Прохождения">
+            <ScrollViewer VerticalScrollBarVisibility="Auto">
+                <StackPanel Margin="12" Spacing="8">
+
+                    <TextBlock Text="Добавление прохождения"
+                               FontSize="18"
+                               FontWeight="Bold"/>
+
+                    <TextBlock Text="Команда"/>
+                    <ComboBox x:Name="PlaythroughTeamComboBox">
+                        <ComboBox.ItemTemplate>
+                            <DataTemplate x:DataType="models:Team">
+                                <TextBlock Text="{Binding TeamName}"/>
+                            </DataTemplate>
+                        </ComboBox.ItemTemplate>
+                    </ComboBox>
+
+                    <TextBlock Text="Квест"/>
+                    <ComboBox x:Name="PlaythroughQuestComboBox">
+                        <ComboBox.ItemTemplate>
+                            <DataTemplate x:DataType="models:Quest">
+                                <TextBlock Text="{Binding Title}"/>
+                            </DataTemplate>
+                        </ComboBox.ItemTemplate>
+                    </ComboBox>
+
+                    <TextBlock Text="Дата начала"/>
+                    <CalendarDatePicker x:Name="PlaythroughDatePicker"/>
+
+                    <TextBlock Text="Время начала"/>
+                    <TimePicker x:Name="PlaythroughTimePicker"/>
+
+                    <TextBlock Text="Оплаченная сумма (руб.)"/>
+                    <TextBox x:Name="PaidAmountBox"/>
+
+                    <CheckBox x:Name="IsCompletedCheckBox"
+                              Content="Квест завершён"/>
+
+                    <Button x:Name="AddPlaythroughButton" Content="Добавить"/>
+                    <Button x:Name="DeletePlaythroughButton" Content="Удалить выбранное"/>
+
+                    <TextBlock x:Name="PlaythroughMessage"
+                               TextWrapping="Wrap"/>
+
+                    <TextBlock Text="Список прохождений"
+                               FontSize="18"
+                               FontWeight="Bold"/>
+
+                    <ListBox x:Name="PlaythroughsList"
+                             Height="180"/>
+
+                </StackPanel>
+            </ScrollViewer>
+        </TabItem>
+
+    </TabControl>
+
 </UserControl>
