@@ -7,38 +7,42 @@
 
         <!-- КОМАНДЫ -->
         <TabItem Header="Команды">
-            <ScrollViewer VerticalScrollBarVisibility="Auto">
-                <StackPanel Margin="12" Spacing="8">
+            <ScrollViewer HorizontalScrollBarVisibility="Disabled"
+                          VerticalScrollBarVisibility="Auto">
+                <StackPanel Margin="12"
+                            Spacing="8"
+                            MaxWidth="300"
+                            HorizontalAlignment="Center">
 
                     <TextBlock Text="Добавление команды"
                                FontSize="18"
-                               FontWeight="Bold"/>
+                               FontWeight="Bold"
+                               TextWrapping="Wrap" />
 
-                    <TextBlock Text="Название команды"/>
-                    <TextBox x:Name="TeamNameBox"/>
+                    <TextBlock Text="Название команды" TextWrapping="Wrap" />
+                    <TextBox x:Name="TeamNameBox" MinHeight="44" MaxWidth="300" />
 
-                    <TextBlock Text="Имя капитана"/>
-                    <TextBox x:Name="CaptainNameBox"/>
+                    <TextBlock Text="Имя капитана" TextWrapping="Wrap" />
+                    <TextBox x:Name="CaptainNameBox" MinHeight="44" MaxWidth="300" />
 
-                    <TextBlock Text="Количество участников"/>
-                    <TextBox x:Name="MemberCountBox"/>
+                    <TextBlock Text="Количество участников" TextWrapping="Wrap" />
+                    <TextBox x:Name="MemberCountBox" MinHeight="44" MaxWidth="300" />
 
-                    <TextBlock Text="Уровень опыта"/>
-                    <TextBox x:Name="ExperienceLevelBox"/>
+                    <TextBlock Text="Уровень опыта" TextWrapping="Wrap" />
+                    <TextBox x:Name="ExperienceLevelBox" MinHeight="44" MaxWidth="300" />
 
-                    <Button x:Name="AddTeamButton" Content="Добавить"/>
-                    <Button x:Name="DeleteTeamButton" Content="Удалить выбранную"/>
-                    <Button x:Name="SaveTeamButton" Content="Сохранить изменения"/>
+                    <Button x:Name="AddTeamButton" Content="Добавить" MinHeight="44" MaxWidth="300" />
+                    <Button x:Name="DeleteTeamButton" Content="Удалить выбранную" MinHeight="44" MaxWidth="300" />
+                    <Button x:Name="SaveTeamButton" Content="Сохранить изменения" MinHeight="44" MaxWidth="300" />
 
-                    <TextBlock x:Name="TeamMessage"
-                               TextWrapping="Wrap"/>
+                    <TextBlock x:Name="TeamMessage" TextWrapping="Wrap" />
 
                     <TextBlock Text="Список команд"
                                FontSize="18"
-                               FontWeight="Bold"/>
+                               FontWeight="Bold"
+                               TextWrapping="Wrap" />
 
-                    <ListBox x:Name="TeamsList"
-                             Height="180"/>
+                    <ListBox x:Name="TeamsList" MaxHeight="220" />
 
                 </StackPanel>
             </ScrollViewer>
@@ -46,40 +50,44 @@
 
         <!-- КВЕСТЫ -->
         <TabItem Header="Квесты">
-            <ScrollViewer VerticalScrollBarVisibility="Auto">
-                <StackPanel Margin="12" Spacing="8">
+            <ScrollViewer HorizontalScrollBarVisibility="Disabled"
+                          VerticalScrollBarVisibility="Auto">
+                <StackPanel Margin="12"
+                            Spacing="8"
+                            MaxWidth="300"
+                            HorizontalAlignment="Center">
 
                     <TextBlock Text="Добавление квеста"
                                FontSize="18"
-                               FontWeight="Bold"/>
+                               FontWeight="Bold"
+                               TextWrapping="Wrap" />
 
-                    <TextBlock Text="Название квеста"/>
-                    <TextBox x:Name="QuestTitleBox"/>
+                    <TextBlock Text="Название квеста" TextWrapping="Wrap" />
+                    <TextBox x:Name="QuestTitleBox" MinHeight="44" MaxWidth="300" />
 
-                    <TextBlock Text="Жанр"/>
-                    <TextBox x:Name="QuestGenreBox"/>
+                    <TextBlock Text="Жанр" TextWrapping="Wrap" />
+                    <TextBox x:Name="QuestGenreBox" MinHeight="44" MaxWidth="300" />
 
-                    <TextBlock Text="Сложность (1-5)"/>
-                    <TextBox x:Name="QuestDifficultyBox"/>
+                    <TextBlock Text="Сложность (1-5)" TextWrapping="Wrap" />
+                    <TextBox x:Name="QuestDifficultyBox" MinHeight="44" MaxWidth="300" />
 
-                    <TextBlock Text="Уровень страха (1-5)"/>
-                    <TextBox x:Name="QuestFearLevelBox"/>
+                    <TextBlock Text="Уровень страха (1-5)" TextWrapping="Wrap" />
+                    <TextBox x:Name="QuestFearLevelBox" MinHeight="44" MaxWidth="300" />
 
-                    <TextBlock Text="Продолжительность (минуты)"/>
-                    <TextBox x:Name="QuestDurationBox"/>
+                    <TextBlock Text="Продолжительность (минуты)" TextWrapping="Wrap" />
+                    <TextBox x:Name="QuestDurationBox" MinHeight="44" MaxWidth="300" />
 
-                    <Button x:Name="AddQuestButton" Content="Добавить"/>
-                    <Button x:Name="DeleteQuestButton" Content="Удалить выбранный"/>
+                    <Button x:Name="AddQuestButton" Content="Добавить" MinHeight="44" MaxWidth="300" />
+                    <Button x:Name="DeleteQuestButton" Content="Удалить выбранный" MinHeight="44" MaxWidth="300" />
 
-                    <TextBlock x:Name="QuestMessage"
-                               TextWrapping="Wrap"/>
+                    <TextBlock x:Name="QuestMessage" TextWrapping="Wrap" />
 
                     <TextBlock Text="Список квестов"
                                FontSize="18"
-                               FontWeight="Bold"/>
+                               FontWeight="Bold"
+                               TextWrapping="Wrap" />
 
-                    <ListBox x:Name="QuestsList"
-                             Height="180"/>
+                    <ListBox x:Name="QuestsList" MaxHeight="220" />
 
                 </StackPanel>
             </ScrollViewer>
@@ -87,55 +95,61 @@
 
         <!-- ПРОХОЖДЕНИЯ -->
         <TabItem Header="Прохождения">
-            <ScrollViewer VerticalScrollBarVisibility="Auto">
-                <StackPanel Margin="12" Spacing="8">
+            <ScrollViewer HorizontalScrollBarVisibility="Disabled"
+                          VerticalScrollBarVisibility="Auto">
+                <StackPanel Margin="12"
+                            Spacing="8"
+                            MaxWidth="300"
+                            HorizontalAlignment="Center">
 
                     <TextBlock Text="Добавление прохождения"
                                FontSize="18"
-                               FontWeight="Bold"/>
+                               FontWeight="Bold"
+                               TextWrapping="Wrap" />
 
-                    <TextBlock Text="Команда"/>
-                    <ComboBox x:Name="PlaythroughTeamComboBox">
+                    <TextBlock Text="Команда" TextWrapping="Wrap" />
+                    <ComboBox x:Name="PlaythroughTeamComboBox" MinHeight="44" MaxWidth="300">
                         <ComboBox.ItemTemplate>
                             <DataTemplate x:DataType="models:Team">
-                                <TextBlock Text="{Binding TeamName}"/>
+                                <TextBlock Text="{Binding TeamName}" TextWrapping="Wrap" />
                             </DataTemplate>
                         </ComboBox.ItemTemplate>
                     </ComboBox>
 
-                    <TextBlock Text="Квест"/>
-                    <ComboBox x:Name="PlaythroughQuestComboBox">
+                    <TextBlock Text="Квест" TextWrapping="Wrap" />
+                    <ComboBox x:Name="PlaythroughQuestComboBox" MinHeight="44" MaxWidth="300">
                         <ComboBox.ItemTemplate>
                             <DataTemplate x:DataType="models:Quest">
-                                <TextBlock Text="{Binding Title}"/>
+                                <TextBlock Text="{Binding Title}" TextWrapping="Wrap" />
                             </DataTemplate>
                         </ComboBox.ItemTemplate>
                     </ComboBox>
 
-                    <TextBlock Text="Дата начала"/>
-                    <CalendarDatePicker x:Name="PlaythroughDatePicker"/>
+                    <TextBlock Text="Дата начала" TextWrapping="Wrap" />
+                    <CalendarDatePicker x:Name="PlaythroughDatePicker" MinHeight="44" MaxWidth="300" />
 
-                    <TextBlock Text="Время начала"/>
-                    <TimePicker x:Name="PlaythroughTimePicker"/>
+                    <TextBlock Text="Время начала" TextWrapping="Wrap" />
+                    <TimePicker x:Name="PlaythroughTimePicker" MinHeight="44" MaxWidth="300" />
 
-                    <TextBlock Text="Оплаченная сумма (руб.)"/>
-                    <TextBox x:Name="PaidAmountBox"/>
+                    <TextBlock Text="Оплаченная сумма (руб.)" TextWrapping="Wrap" />
+                    <TextBox x:Name="PaidAmountBox" MinHeight="44" MaxWidth="300" />
 
                     <CheckBox x:Name="IsCompletedCheckBox"
-                              Content="Квест завершён"/>
+                              Content="Квест завершён"
+                              MinHeight="44"
+                              MaxWidth="300" />
 
-                    <Button x:Name="AddPlaythroughButton" Content="Добавить"/>
-                    <Button x:Name="DeletePlaythroughButton" Content="Удалить выбранное"/>
+                    <Button x:Name="AddPlaythroughButton" Content="Добавить" MinHeight="44" MaxWidth="300" />
+                    <Button x:Name="DeletePlaythroughButton" Content="Удалить выбранное" MinHeight="44" MaxWidth="300" />
 
-                    <TextBlock x:Name="PlaythroughMessage"
-                               TextWrapping="Wrap"/>
+                    <TextBlock x:Name="PlaythroughMessage" TextWrapping="Wrap" />
 
                     <TextBlock Text="Список прохождений"
                                FontSize="18"
-                               FontWeight="Bold"/>
+                               FontWeight="Bold"
+                               TextWrapping="Wrap" />
 
-                    <ListBox x:Name="PlaythroughsList"
-                             Height="180"/>
+                    <ListBox x:Name="PlaythroughsList" MaxHeight="220" />
 
                 </StackPanel>
             </ScrollViewer>
