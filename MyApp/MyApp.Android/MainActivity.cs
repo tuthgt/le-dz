@@ -6,7 +6,7 @@ using Avalonia.Android;
 namespace MyApp.Android;
 
 [Activity(
-    Label = "MyApp.Android",
+    Label = "QuestPoint",
     Theme = "@style/MyTheme.NoActionBar",
     Icon = "@drawable/icon",
     MainLauncher = true,
